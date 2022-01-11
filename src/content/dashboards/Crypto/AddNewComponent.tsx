@@ -9,7 +9,9 @@ import {
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
-interface AddNewComponentProps {}
+interface AddNewComponentProps {
+  setOpen: Function;
+}
 
 const AvatarWrapper = styled(Avatar)(
   ({ theme }) => `
@@ -52,14 +54,21 @@ const CardAddAction = styled(Card)(
   `
 );
 
-export const AddNewComponent: React.FC<AddNewComponentProps> = ({}) => {
+export const AddNewComponent: React.FC<AddNewComponentProps> = ({
+  setOpen
+}) => {
   return (
     <Grid item>
       <Tooltip arrow title="Click to add a new wallet">
         <CardAddAction>
           <CardActionArea sx={{ px: 1 }}>
             <CardContent>
-              <AvatarAddWrapper>
+              <AvatarAddWrapper
+                onClick={() => {
+                  console.log('hi');
+                  setOpen(true);
+                }}
+              >
                 <AddTwoToneIcon fontSize="large" />
               </AvatarAddWrapper>
             </CardContent>

@@ -15,6 +15,7 @@
     "@mui/lab": "5.0.0-alpha.50",
     "@mui/material": "5.0.3",
     "@mui/styles": "5.0.1",
+    "@mui/x-data-grid": "^5.2.2",
     "@types/nprogress": "0.2.0",
     "@types/react": "17.0.25",
     "@types/react-dom": "17.0.9",
@@ -22,6 +23,9 @@
     "chart.js": "2.9.4",
     "clsx": "1.1.1",
     "date-fns": "2.25.0",
+    "formik": "^2.2.9",
+    "highcharts": "^9.3.2",
+    "highcharts-react-official": "^3.1.0",
     "history": "5.0.1",
     "nprogress": "0.2.0",
     "numeral": "2.0.6",
@@ -37,7 +41,8 @@
     "react-scripts": "4.0.3",
     "stylis": "4.0.10",
     "stylis-plugin-rtl": "2.1.0",
-    "web-vitals": "2.1.2"
+    "web-vitals": "2.1.2",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
