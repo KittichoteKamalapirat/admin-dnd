@@ -1,4 +1,4 @@
-[See like project](https://admin-dnd.netlify.app/)
+[See live project](https://admin-dnd.netlify.app/)
 
 <!-- <p align="center">
     <a href="https://bloomui.com" title="BloomUI.com">
