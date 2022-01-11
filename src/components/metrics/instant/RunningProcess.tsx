@@ -174,7 +174,7 @@ const rows = [
   }
 ];
 
-export const RunningProcess: React.FC<RunningProcessProps> = ({}) => {
+export const RunningProcess: React.FC<RunningProcessProps> = () => {
   return (
     <Card>
       <Grid spacing={0} container>

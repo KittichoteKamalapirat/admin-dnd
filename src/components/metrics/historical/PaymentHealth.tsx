@@ -2,7 +2,6 @@ import { Card, Grid, Box, Typography } from '@mui/material';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import React, { useRef } from 'react';
-import { uniqueVisitors } from './AppIncidentManagement';
 
 interface PaymentHealthProps {}
 

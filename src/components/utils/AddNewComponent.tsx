@@ -15,15 +15,6 @@ interface AddNewComponentProps {
   setOpen: Function;
 }
 
-const AvatarWrapper = styled(Avatar)(
-  ({ theme }) => `
-          background: transparent;
-          margin-left: -${theme.spacing(0.5)};
-          margin-bottom: ${theme.spacing(1)};
-          margin-top: ${theme.spacing(2)};
-  `
-);
-
 const AvatarAddWrapper = styled(Avatar)(
   ({ theme }) => `
           background: ${theme.colors.alpha.black[5]};

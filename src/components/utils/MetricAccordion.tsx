@@ -1,7 +1,6 @@
 import {
   Box,
   Typography,
-  Modal,
   Accordion,
   AccordionDetails,
   AccordionSummary,

@@ -1,23 +1,7 @@
-import {
-  Button,
-  Card,
-  Box,
-  Grid,
-  Typography,
-  Hidden,
-  Avatar,
-  Divider,
-  ListItem,
-  ListItemText,
-  List,
-  ListItemAvatar
-} from '@mui/material';
+import { Card, Box, Grid, Typography } from '@mui/material';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-import { styled } from '@mui/material/styles';
-import TrendingUp from '@mui/icons-material/TrendingUp';
-import { useRef } from 'react';
 import AppIncidentManagement from './AppIncidentManagement';
 
 const options: Highcharts.Options = {
@@ -112,8 +96,6 @@ export const uniqueVisitors: Highcharts.Options = {
 function AppIncidentManagementSummary(
   props: HighchartsReact.Props | InstantDataProps
 ) {
-  const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
-
   const componenetsArray = [
     <AppIncidentManagement
       metrix="Application Incident Management (last 24 hours)"

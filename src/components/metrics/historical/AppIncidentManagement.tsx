@@ -1,34 +1,8 @@
-import {
-  Button,
-  Card,
-  Box,
-  Grid,
-  Typography,
-  Hidden,
-  Avatar,
-  Divider,
-  ListItem,
-  ListItemText,
-  List,
-  ListItemAvatar,
-  Paper
-} from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-import { styled } from '@mui/material/styles';
-import TrendingUp from '@mui/icons-material/TrendingUp';
 import { useRef } from 'react';
-
-const AvatarSuccess = styled(Avatar)(
-  ({ theme }) => `
-      background-color: ${theme.colors.success.main};
-      color: ${theme.palette.success.contrastText};
-      width: ${theme.spacing(8)};
-      height: ${theme.spacing(8)};
-      box-shadow: ${theme.colors.shadows.success};
-`
-);
 
 interface InstantDataProps {
   metrix: string;

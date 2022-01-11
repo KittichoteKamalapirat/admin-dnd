@@ -1,33 +1,8 @@
-import {
-  Button,
-  Card,
-  Box,
-  Grid,
-  Typography,
-  Hidden,
-  Avatar,
-  Divider,
-  ListItem,
-  ListItemText,
-  List,
-  ListItemAvatar
-} from '@mui/material';
+import { Card, Box, Grid, Typography } from '@mui/material';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-import { styled } from '@mui/material/styles';
-import TrendingUp from '@mui/icons-material/TrendingUp';
 import { useRef } from 'react';
-
-const AvatarSuccess = styled(Avatar)(
-  ({ theme }) => `
-        background-color: ${theme.colors.success.main};
-        color: ${theme.palette.success.contrastText};
-        width: ${theme.spacing(8)};
-        height: ${theme.spacing(8)};
-        box-shadow: ${theme.colors.shadows.success};
-  `
-);
 
 interface InstantDataProps {
   metrix: string;
@@ -77,16 +52,6 @@ export const uniqueVisitors: Highcharts.Options = {
 };
 
 function CustomerLogins(props: HighchartsReact.Props | InstantDataProps) {
-  const cryptoBalance = {
-    datasets: [
-      {
-        data: [20, 10, 40, 30],
-        backgroundColor: ['#ff9900', '#1c81c2', '#333', '#5c6ac0']
-      }
-    ],
-    labels: ['Bitcoin', 'Ripple', 'Cardano', 'Ethereum']
-  };
-
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
 
   return (
