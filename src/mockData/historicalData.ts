@@ -1,53 +1,144 @@
-export const uniqueVisitors: Highcharts.Options = {
-  credits: {
-    text: 'Mock Data'
+import Highcharts from 'highcharts';
+
+export const historicalOption1 = {
+  chart: {
+    type: 'areaspline'
   },
   title: {
-    text: null
-
-    // style: { fontWeight: 'bold', fontSize: '30px' }
+    text: 'Average fruit consumption during one week'
   },
-  yAxis: {
-    title: {
-      text: 'Visitors'
-    }
+  legend: {
+    layout: 'vertical',
+    align: 'left',
+    verticalAlign: 'top',
+    x: 150,
+    y: 100,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
   },
   xAxis: {
     categories: [
-      '2AM',
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      '10AM',
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      '6PM'
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday'
+    ],
+    plotBands: [
+      {
+        // visualize the weekend
+        from: 4.5,
+        to: 6.5,
+        color: 'rgba(68, 170, 213, .2)'
+      }
     ]
+  },
+  yAxis: {
+    title: {
+      text: 'Fruit units'
+    }
+  },
+  tooltip: {
+    shared: true,
+    valueSuffix: ' units'
+  },
+  credits: {
+    enabled: false
+  },
+  plotOptions: {
+    areaspline: {
+      fillOpacity: 0.5
+    }
   },
   series: [
     {
-      type: 'line',
-      name: 'Mobile',
+      name: 'John',
+      data: [3, 4, 3, 5, 4, 10, 12]
+    },
+    {
+      name: 'Jane',
+      data: [1, 3, 4, 3, 3, 5, 4]
+    }
+  ]
+};
+
+export const historicalOption2 = {
+  chart: {
+    type: 'column'
+  },
+  title: {
+    text: 'Monthly Average Rainfall'
+  },
+  subtitle: {
+    text: 'Source: WorldClimate.com'
+  },
+  xAxis: {
+    categories: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec'
+    ],
+    crosshair: true
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Rainfall (mm)'
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+    pointFormat:
+      '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+    footerFormat: '</table>',
+    shared: true,
+    useHTML: true
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0.2,
+      borderWidth: 0
+    }
+  },
+  series: [
+    {
+      name: 'Tokyo',
       data: [
-        1000, 2000, -300, 1000, 300, 400, 1000, 1000, 1000, 1000, 1000, 1000,
-        1000, 1000, 1000, 1000
+        49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1,
+        95.6, 54.4
       ]
     },
     {
-      type: 'line',
-      name: 'Web',
+      name: 'New York',
       data: [
-        20000, 20000, 21000, 20000, 21000, 20030, 20000, 20030, 20030, 20030,
-        20030, 20030, 20030, 20030, 20030
+        83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6,
+        92.3
+      ]
+    },
+    {
+      name: 'London',
+      data: [
+        48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2
+      ]
+    },
+    {
+      name: 'Berlin',
+      data: [
+        42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1
       ]
     }
   ]
