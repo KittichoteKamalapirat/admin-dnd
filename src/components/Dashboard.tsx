@@ -14,6 +14,7 @@ import { NetworkHealth } from './metrics/instant/NetworkHealth';
 import RunningProcess from './metrics/instant/RunningProcess';
 import { AddNewComponent } from './utils/AddNewComponent';
 import MetricAccordion from './utils/MetricAccordion';
+import { ExchangeRate } from './metrics/historical/ExchangeRate';
 
 //metrics
 
@@ -51,6 +52,11 @@ const options: Highcharts.Options = {
 };
 
 const initialState: DragableComponenet[] = [
+  {
+    component: <ExchangeRate />,
+    id: 'exchangeRate',
+    width: 6
+  },
   {
     component: <AppIncidentManagementSummary />,
     id: 'incidentModerate',
